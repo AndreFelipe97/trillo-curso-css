@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { pulsate } from '../../styles/animations';
+import { pulsate } from "../../styles/animations";
 
 export const HotelView = styled.main`
   background-color: var(--color-white);
-  height: 80rem;
   flex: 1;
 `;
 
@@ -49,7 +48,7 @@ export const OverviewLocation = styled.div`
   align-items: center;
 
   svg {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   button {
@@ -61,7 +60,7 @@ export const OverviewLocation = styled.div`
     display: inline-block;
     background-color: transparent;
     cursor: pointer;
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:hover {
       color: var(--color-grey-dark-1);
@@ -94,6 +93,76 @@ export const OverviewRatingAverage = styled.div`
 `;
 
 export const OverviewRatingCount = styled.div`
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
+`;
+
+export const Detail = styled.div`
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+`;
+
+export const Description = styled.div`
+  font-size: 1.4rem;
+  background-color: var(--color-white);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+
+  p:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+`;
+
+export const List = styled.ul`
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-bottom: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+
+  svg {
+    color: var(--color-primary);
+  }
+`;
+
+export const Recommend = styled.div`
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+`;
+
+export const RecommendCount = styled.div`
+  margin-right: auto;
+`;
+
+export const RecommendFriends = styled.div`
+  img {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+
+    &:not(:first-child) {
+      margin-left: -1.5rem;
+    }
+  }
+`;
+
+export const UserReview = styled.div`
+  background-color: green;
+  flex: 1;
 `;
