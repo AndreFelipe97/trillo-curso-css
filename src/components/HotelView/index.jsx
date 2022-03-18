@@ -4,6 +4,8 @@ import {
   Hotel1,
   Hotel2,
   Hotel3,
+  User1,
+  User2,
   User3,
   User4,
   User5,
@@ -28,6 +30,12 @@ import {
   Recommend,
   RecommendCount,
   RecommendFriends,
+  ReviewPhoto,
+  Review,
+  ReviewText,
+  ReviewUser,
+  ReviewUserBox,
+  UserRating,
 } from "./styles";
 
 export function HotelView() {
@@ -107,14 +115,47 @@ export function HotelView() {
               <p>Lucy and 3 other friends recommend this hotel.</p>
             </RecommendCount>
             <RecommendFriends>
-              <img src={User3} alt="Friend 1" />
-              <img src={User4} alt="Friend 2" />
-              <img src={User5} alt="Friend 3" />
-              <img src={User6} alt="Friend 4" />
+              <ReviewPhoto src={User3} alt="Friend 1" />
+              <ReviewPhoto src={User4} alt="Friend 2" />
+              <ReviewPhoto src={User5} alt="Friend 3" />
+              <ReviewPhoto src={User6} alt="Friend 4" />
             </RecommendFriends>
           </Recommend>
         </Description>
-        <UserReview>User Review</UserReview>
+        <UserReview>
+          <Review>
+            <ReviewText>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              incidunt omnis dolor sunt pariatur iste veritatis, ipsam neque ad
+              accusantium quos velit minus, tempore atque. Officiis neque
+              doloribus a distinctio.
+            </ReviewText>
+            <ReviewUser>
+              <img src={User1} alt="User 1" />
+              <ReviewUserBox>
+                <p id="name">Nick Smith</p>
+                <p id="date">Feb 23rd, 2017</p>
+              </ReviewUserBox>
+              <UserRating>7.8</UserRating>
+            </ReviewUser>
+          </Review>
+          <Review>
+            <ReviewText>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              incidunt omnis dolor sunt pariatur iste veritatis, ipsam neque ad
+              accusantium quos velit minus, tempore atque. Officiis neque
+              doloribus a distinctio.
+            </ReviewText>
+            <ReviewUser>
+              <img src={User2} alt="User 1" />
+              <ReviewUserBox>
+                <p id="name">Mary Thomas</p>
+                <p id="date">Sept 13th, 2017</p>
+              </ReviewUserBox>
+              <UserRating>9.3</UserRating>
+            </ReviewUser>
+          </Review>
+        </UserReview>
       </Detail>
     </StyledHotelView>
   );

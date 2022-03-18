@@ -98,6 +98,7 @@ export const OverviewRatingCount = styled.div`
 `;
 
 export const Detail = styled.div`
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
@@ -105,7 +106,6 @@ export const Detail = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 1.4rem;
   background-color: var(--color-white);
   flex: 0 0 60%;
   margin-right: 4.5rem;
@@ -148,21 +148,64 @@ export const RecommendCount = styled.div`
   margin-right: auto;
 `;
 
-export const RecommendFriends = styled.div`
-  img {
-    box-sizing: content-box;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    border: 3px solid var(--color-white);
+export const RecommendFriends = styled.div``;
 
-    &:not(:first-child) {
-      margin-left: -1.5rem;
-    }
+export const ReviewPhoto = styled.img`
+  box-sizing: content-box;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+
+  &:not(:first-child) {
+    margin-left: -1.5rem;
   }
 `;
 
-export const UserReview = styled.div`
-  background-color: green;
+export const UserReview = styled.figure`
   flex: 1;
+`;
+
+export const Review = styled.figure`
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+`;
+
+export const ReviewText = styled.blockquote`
+  margin-bottom: 2rem;
+`;
+
+export const ReviewUser = styled.figcaption`
+  display: flex;
+  justify-content: center;
+  img {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+`;
+
+export const ReviewUserBox = styled.div`
+  margin-right: auto;
+
+  p#name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  p#date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3);
+  }
+`;
+
+export const UserRating = styled.div`
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  font-weight: 300;
 `;
