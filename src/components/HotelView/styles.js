@@ -50,27 +50,6 @@ export const OverviewLocation = styled.div`
   svg {
     margin-right: 0.5rem;
   }
-
-  button {
-    border: none;
-    color: var(--color-primary);
-    font-size: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.2s;
-
-    &:hover {
-      color: var(--color-grey-dark-1);
-    }
-
-    &:focus {
-      outline: none;
-      animation: ${pulsate} 1s infinite;
-    }
-  }
 `;
 
 export const OverviewRating = styled.div`
@@ -164,6 +143,9 @@ export const ReviewPhoto = styled.img`
 
 export const UserReview = styled.figure`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Review = styled.figure`
@@ -208,4 +190,102 @@ export const UserRating = styled.div`
   color: var(--color-primary);
   font-size: 2.2rem;
   font-weight: 300;
+`;
+
+export const ButtonInline = styled.button`
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: ${pulsate} 1s infinite;
+  }
+`;
+
+export const Cta = styled.div`
+  padding: 3.5rem 0;
+  text-align: center;
+`;
+
+export const CtaBookNow = styled.h2`
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+`;
+
+export const CtaButton = styled.button`
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  .visible {
+    padding: 2rem 7.5rem;
+  }
+
+  .invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+
+    .visible {
+      transform: translateY(100%);
+    }
+
+    .invisible {
+      top: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: ${pulsate} 1s infinite;
+  }
 `;

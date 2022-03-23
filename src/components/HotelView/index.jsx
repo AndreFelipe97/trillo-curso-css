@@ -36,6 +36,10 @@ import {
   ReviewUser,
   ReviewUserBox,
   UserRating,
+  ButtonInline,
+  Cta,
+  CtaBookNow,
+  CtaButton,
 } from "./styles";
 
 export function HotelView() {
@@ -63,7 +67,7 @@ export function HotelView() {
         </OverViewStars>
         <OverviewLocation>
           <FaMapMarkerAlt />
-          <button>Albufeira, Portugal</button>
+          <ButtonInline>Albufeira, Portugal</ButtonInline>
         </OverviewLocation>
         <OverviewRating>
           <OverviewRatingAverage>8.6</OverviewRatingAverage>
@@ -155,8 +159,20 @@ export function HotelView() {
               <UserRating>9.3</UserRating>
             </ReviewUser>
           </Review>
+          <ButtonInline>
+            Show all <span>&rarr;</span>
+          </ButtonInline>
         </UserReview>
       </Detail>
+      <Cta>
+        <CtaBookNow>
+          Good news! We have 4 free rooms for your selected dates!
+        </CtaBookNow>
+        <CtaButton>
+          <span className="visible">Book now</span>
+          <span className="invisible">Only 4 rooms left</span>
+        </CtaButton>
+      </Cta>
     </StyledHotelView>
   );
 }
